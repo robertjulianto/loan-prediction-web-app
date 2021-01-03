@@ -1,0 +1,179 @@
+{% extends 'app.html' %}
+
+{% block form %}
+
+
+    <div class="row mb-3 d-flex align-items-center justify-content-between">
+        <div class="col">
+            <label for="btnradio_gender" class="form-label col-auto">Gender</label>
+            <div>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="btnradio_gender" value="Male"
+                        id="gender_male" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="gender_male">Male</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_gender" value="Female"
+                        id="gender_female" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="gender_female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <label for="btnradio_married" class="form-label col-auto">Married</label>
+            <div>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="btnradio_married" value="Yes"
+                        id="married_yes" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="married_yes">Yes</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_married" value="No" id="married_no"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" for="married_no">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3 align-items-center justify-content-between">
+        <div class="col">
+            <label for="btnradio_dependents" class="form-label col-auto">Dependents</label>
+            <div>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="btnradio_dependents" value="0"
+                        id="dependents_0" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="dependents_0">0</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_dependents" value="1"
+                        id="dependents_1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="dependents_1">1</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_dependents" value="2"
+                        id="dependents_2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="dependents_2">2</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_dependents" value="3+"
+                        id="dependents_3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="dependents_3">3+</label>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <label for="btnradio_education" class="form-label col-auto">Education</label>
+            <div>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="btnradio_education" value="Graduate"
+                        id="education_graduate" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="education_graduate">Graduate</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_education" value="Not Graduate"
+                        id="education_not" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="education_not">Not Graduate</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3 align-items-center">
+        <div class="col">
+            <label for="applicant_income" class="form-label col-auto">Applicant Income</label>
+            <input type="number" class="form-control" id="applicant_income" value="1000" required>
+        </div>
+        <div class="col">
+            <label for="coapplicant_income" class="form-label col-auto">Coapplicant Income</label>
+            <input type="number" class="form-control" id="coapplicant_income" value="1000">
+        </div>
+    </div>
+
+    <div class="row mb-3 align-items-center">
+        <div class="col">
+            <label for="btnradio_area" class="form-label col-auto">Property Area</label>
+            <div>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="btnradio_area" value="Semiurban"
+                        id="area_semiurban" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="area_semiurban">Semi Urban</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_area" value="Rural" id="area_rural"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" for="area_rural">Rural</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_area" value="Urban" id="area_urban"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" for="area_urban">Urban</label>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <label for="btnradio_self_employed" class="form-label col-auto">Self Employed</label>
+            <div>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="btnradio_self_employed" value="Yes"
+                        id="self_employed_yes" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="self_employed_yes">Yes</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_self_employed" value="No"
+                        id="self_employed_no" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="self_employed_no">No</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mb-3 align-items-center justify-content-center">
+        <div class="col">
+            <label for="loan_amount" class="form-label col-auto">Loan Amount</label>
+            <input type="number" class="form-control" id="loan_amount" value="1000" required>
+        </div>
+        <div class="col">
+            <label for="loan_term" class="form-label col-auto">Loan Term</label>
+            <select class="form-select" id="loan_term">
+                <option value="12">12</option>
+                <option value="36">36</option>
+                <option value="60">60</option>
+                <option value="84">84</option>
+                <option value="120">120</option>
+                <option value="180">180</option>
+                <option value="240">240</option>
+                <option value="300">300</option>
+                <option value="360">360</option>
+                <option value="480">480</option>
+            </select>
+        </div>
+        <div class="col align-self-center">
+            <label for="btnradio_credit" class="form-label col-auto">All debts paid</label>
+            <div>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="btnradio_credit" value="Yes" id="credit_yes"
+                        autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="credit_yes">Yes</label>
+
+                    <input type="radio" class="btn-check" name="btnradio_credit" value="No" id="credit_no"
+                        autocomplete="off">
+                    <label class="btn btn-outline-primary" for="credit_no">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3 align-items-start justify-content-start">
+        <div class="col-2">
+            <button id="btn_submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="notif-alert notif-approved">
+                    <div class="alert alert-success" role="alert">
+                        <h2>LOAN APPROVED!!</h2>
+                    </div>
+                </div>
+                <div class="notif-alert notif-rejected">
+                    <div class="alert alert-danger" role="alert">
+                        <h2>LOAN REJECTED!!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
